@@ -1,0 +1,136 @@
+@mixin maxSize {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+@mixin charaBg($charaBg) {
+    background-image: url($charaBg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.title {
+    @include maxSize();
+
+    h3 {
+        font-size: 2em;
+        line-height: 150%;
+        letter-spacing: 0.2rem;
+        color: brown;
+        border-top: 3px solid brown;
+        border-bottom: 3px solid brown;
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.intro {
+    @include maxSize();
+    width: 90%;
+    border-top: 3px solid darkgoldenrod;
+    margin-top: 50px;
+    
+    .character {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 3px solid darkgoldenrod;
+
+
+        img {
+            margin: 0 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-left: 100px;
+        }
+        .data {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+        }
+    }
+}
+.kirito {
+    @include charaBg('./img/kirito.jpg');
+}
+.asuna {
+    @include charaBg('./img/asuna.jpg');
+}
+.yui {
+    @include charaBg('./img/yui.jpg');    
+}
+.leafa {
+    @include charaBg('./img/leafa.jpeg');    
+}
+.sinon {
+    @include charaBg('./img/sinon.jpg');
+}
+.yuuki {
+    @include charaBg('./img/yuuki.jpg');
+}
+.alice {
+    @include charaBg('./img/alice.jpg');
+}
+.eugeo {
+    @include charaBg('./img/eugeo.jpg');
+}
+.bg-mask {
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    padding: 100px 100px 200px 100px;
+    
+    .max-wid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+        a {
+            float: right;
+            padding-right: 150px;
+        }    
+    }
+
+}
+
+.reviews {
+    width: 60%;
+    margin: 0 auto;
+
+    .reviews-bg-mask {
+        height: 100%;
+        background: rgba(115, 115, 115, 0.5);
+        padding: 10px;
+
+        .review-title {
+            text-align: center;
+            font-size: 1.8em;
+            margin-top: 10px;
+        }
+        .review {
+            display: flex;
+
+            .review-user {
+                margin-left: auto;
+
+                p {
+                    font-size: 1.5em;
+                    padding-right: 50px;
+                    padding-left: 50px;
+                }
+            }
+            .review-content {
+                margin-right: auto;
+
+                p {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
